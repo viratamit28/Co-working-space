@@ -72,19 +72,36 @@
         }
         /* Video Container Styling */
         .video-container {
-            max-width: 100%;
-            height: auto;
-            margin: 20px 0;
             display: flex;
-            justify-content: space-between;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
             flex-wrap: wrap;
-        }
-        .video-container iframe {
-            width: 32%;
-            height: 250px;
-            border: none;
-            margin-bottom: 20px;
-        }
+            padding: 20px;
+            background: linear-gradient(135deg, #1e3c72, #2a5298);
+            border-radius: 15px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+          }
+        
+          video {
+            width: 600px;
+            height: 400px;
+            border-radius: 12px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+          }
+        
+          video:hover {
+            transform: scale(1.05);
+            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.4);
+          }
+        
+          h2 {
+            text-align: center;
+            color: white;
+            font-family: 'Arial', sans-serif;
+            margin-bottom: 10px;
+          }
         /* Ensures responsive layout for multiple videos */
         @media (max-width: 768px) {
             .video-container iframe {
@@ -134,14 +151,24 @@
         </div>
 
         <!-- Video Embedding Section -->
-        <h2>Watch Sample Videos</h2>
         <div class="video-container">
+            <h2>Stunning Video Gallery</h2>
             <!-- Video 1 -->
-            <iframe src="https://www.youtube.com/embed/VIDEO_ID_1" title="Sample Video 1" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <video width="600" height="400" controls>
+                <source src="1.MOV" type="video/mp4">
+                Your browser does not support the video tag.
+              </video>
+              
             <!-- Video 2 -->
-            <iframe src="https://www.youtube.com/embed/VIDEO_ID_2" title="Sample Video 2" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <video width="600" height="400" controls>
+                <source src="2.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+              </video>
             <!-- Video 3 -->
-            <iframe src="https://www.youtube.com/embed/VIDEO_ID_3" title="Sample Video 3" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <video width="600" height="400" controls>
+                <source src="3.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+              </video>
         </div>
 
         <p>To proceed, could you kindly share a sample of the data for an initial assessment? Additionally, please provide your video editing preferences (e.g., style, duration, and quantity) so we can offer a more precise quote.</p>
